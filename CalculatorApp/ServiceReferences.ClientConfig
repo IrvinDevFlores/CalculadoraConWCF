@@ -1,0 +1,18 @@
+﻿<configuration>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+                <binding name="BasicHttpBinding_ICalculadoraService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+            </basicHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="../CalculadoraService.svc" binding="basicHttpBinding"
+                bindingConfiguration="BasicHttpBinding_ICalculadoraService"
+                contract="CalculatorServiceRefenrence.ICalculadoraService"
+                name="BasicHttpBinding_ICalculadoraService" />
+        </client>
+    </system.serviceModel>
+</configuration>
